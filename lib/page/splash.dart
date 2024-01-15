@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart'; // Sesuaikan dengan lokasi file Login.dart Anda
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, '/login');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Image.asset('assets/images/bg.png'),
+      ),
+    );
+  }
+}
